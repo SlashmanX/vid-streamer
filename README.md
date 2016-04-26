@@ -1,5 +1,3 @@
-**This project is not well maintained, we are looking for active contributors that want to take the lead on it, open an issue**
-
 VidStreamer.js
 ==============
 
@@ -27,7 +25,7 @@ app.use("/videos/", vidStreamer);
 app.listen(3000);
 ```
 
-If you want to pass in the settings instead via your app, try this (thanks to [Will Laurance](https://github.com/meloncholy/vid-streamer/issues/3)). Settings given will be merged with the defaults (see below), so you don't need to supply them all.
+If you want to pass in the settings instead via your app, try this. Settings given will be merged with the defaults (see below), so you don't need to supply them all.
 
 ```javascript
 var http = require("http");

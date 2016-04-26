@@ -63,7 +63,8 @@ var mimeTypes = {
 	".webm": "video/webm",
 	".m3u8": "application/x-mpegurl",
 	".ts": "video/mp2t",
-	".ogg": "video/ogg"
+	".ogg": "video/ogg",
+	".ogv": "video/ogg"
 };
 
 var vidStreamer = function (req, res) {
