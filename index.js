@@ -11,6 +11,7 @@
 var fs = require("fs");
 var url = require("url");
 var events = require("events");
+var path = require('path');
 var settings = require('./config/vidStreamer-sample.json');
 var Throttle = require('throttle');
 
@@ -77,6 +78,7 @@ var vidStreamer = function (req, res) {
 	
 	if (info.path) {
 		try {
+			info.path = path.join(settings.rootPath, info.path);
 			info.path = decodeURIComponent(info.path);
 		} catch (exception) {
 			// Can throw URI malformed exception.
@@ -115,7 +117,7 @@ var vidStreamer = function (req, res) {
 			return false;
 		}
 	} else {
-		info.path = settings.rootFolder + info.path;
+		info.path = path.join(settings.rootFolder, info.path);
 	}
 
 	try {

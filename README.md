@@ -22,7 +22,7 @@ And here's an example of including it in an Express app
 var app = require("express").createServer();
 var vidStreamer = require("vid-streamer");
 
-app.get("/videos/", vidStreamer);
+app.use("/videos/", vidStreamer);
 
 app.listen(3000);
 ```
